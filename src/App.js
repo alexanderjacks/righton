@@ -70,13 +70,14 @@ function App() {
       >
         Create Crypto
       </Button>
+      <div style={{ ...cryptoContainerStyle}}>
       {
         cryptos.map(crypto => (
           <div
             key={crypto.id}
             style={{ ...cryptoStyle, backgroundColor: crypto.color }}
           >
-            <div style={cryptoBg}>
+            <div style={{ background:`radial-gradient(#fff,${crypto.color})` }}>
               <p style={cryptoTitle}>
                 {crypto.title}
               </p>
@@ -84,16 +85,17 @@ function App() {
           </div>
         ))
       }
+      </div>
     </div>
   )
 }
 
-const container = { width:`100%`,padding:40,maxWidth:900 }
+const container = { width:`100%`,minHeight:`100vh`,padding:66,background:`linear-gradient(#fff,#006)`,display:`flex`,flexDirection:`column`,justifyContent:`space-between`, }
 const input = { marginBottom:10 }
 const button = { marginBottom:10 }
 const heading = { fontWeight:`normal`,fontSize:40 }
-const cryptoBg = { backgroundColor:`papayawhip` }
+const cryptoContainerStyle = { display:`flex`,flexFlow:`row wrap` }
+const cryptoStyle = { padding:12,margin:8,borderRadius:4,maxWidth:`140px` }
 const cryptoTitle = { padding:8,margin:0,fontSize:24 }
-const cryptoStyle = { padding:20,marginTop:8,borderRadius:4 }
 
 export default App

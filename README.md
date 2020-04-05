@@ -2,6 +2,13 @@
 
 > by [Jacks Consulting](https://j4cks.com)
 
+# WIP
+
+Features to build:
+- nomics API call
+- store API locally to DataStore lib
+- map out DataStore using prices not just titles (probably add fields to model)
+
 ## Meant to represent an exemplary API (GraphQL) app (React) built in AWS (using Amplify).
 
 Receives live data from [nomics.com API](https://docs.nomics.com/), mutates list on client devices-- no dedicated servers are running to support this service; hosting is ~$1/month on AWS.

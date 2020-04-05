@@ -1,26 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react'
+import { SketchPicker } from 'react-color'
+import { Input, Button } from 'antd'
+import { DataStore } from '@aws-amplify/datastore'
+import { Message } from './models'
+
+const initialState = { color: '#880000', title: '', }
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+  const [formState, updateFormState] = useState(initialState)
+  const [cryptos, updateCryptos] = useState([])
+  const [showPicker, updateShowPicker] = useState(false)
 
-export default App;
+  function onChange(e) {
+    if (e.hex) {
+      updateFormState({ ...formState, color: e.hex })
+    } else {
+      updateFormState({ ...formState, title: e.target.value })
+    }
+  }
+
+  async function fetchCryptos() {
+    const cryptos = await DataStore.query(Crypto)
+    updateCryptos(cryptos)
+  }
+  async function createCrypto() {
+    if (!formState.title) return
+    await DataStore.save(new Crypto({ ...formState }))
+    updateFormState(initialState)
+  }
+}

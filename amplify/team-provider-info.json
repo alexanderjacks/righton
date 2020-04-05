@@ -1,0 +1,15 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-righton-dev-115814-authRole",
+            "UnauthRoleArn": "arn:aws:iam::447075351966:role/amplify-righton-dev-115814-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::447075351966:role/amplify-righton-dev-115814-authRole",
+            "Region": "us-west-2",
+            "DeploymentBucketName": "amplify-righton-dev-115814-deployment",
+            "UnauthRoleName": "amplify-righton-dev-115814-unauthRole",
+            "StackName": "amplify-righton-dev-115814",
+            "StackId": "arn:aws:cloudformation:us-west-2:447075351966:stack/amplify-righton-dev-115814/3da93710-76a6-11ea-be56-0629bfb37232",
+            "AmplifyAppId": "dkrcb0hgkgo2g"
+        }
+    }
+}

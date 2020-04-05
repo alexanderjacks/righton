@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { SketchPicker } from 'react-color'
 import { Input, Button } from 'antd'
 import { DataStore } from '@aws-amplify/datastore'
-import { Message } from './models'
+import { Crypto } from './models'
 
 const initialState = { color: '#880000', title: '', }
 
@@ -95,3 +95,5 @@ const heading = { fontWeight:`normal`,fontSize:40 }
 const cryptoBg = { backgroundColor:`papayawhip` }
 const cryptoTitle = { padding:8,margin:0,fontSize:24 }
 const cryptoStyle = { padding:20,marginTop:8,borderRadius:4 }
+
+export default App

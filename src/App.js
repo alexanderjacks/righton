@@ -3,10 +3,12 @@ import { SketchPicker } from 'react-color'
 import { Input, Button } from 'antd'
 import { DataStore } from '@aws-amplify/datastore'
 import { Crypto } from './models'
+import Nomics from './Nomics'
 
 const initialState = { color: '#880000', title: '', }
 
 function App() {
+  const coins = []
   const [formState, updateFormState] = useState(initialState)
   const [cryptos, updateCryptos] = useState([])
   const [showPicker, updateShowPicker] = useState(false)
@@ -37,7 +39,7 @@ function App() {
 
   return (
     <div style={container}>
-      <h1 style={heading}>Live Crypto Board</h1>
+      <h1 style={heading}>Crypto Prices Board</h1>
       <Input
         onChange={onChange}
         name='title'
@@ -86,11 +88,12 @@ function App() {
         ))
       }
       </div>
+      <Nomics/>
     </div>
   )
 }
 
-const container = { width:`100%`,minHeight:`100vh`,padding:66,background:`linear-gradient(#fff,#006)`,display:`flex`,flexDirection:`column`,justifyContent:`space-between`, }
+const container = { width:`100%`,minHeight:`100vh`,padding:66,background:`linear-gradient(#fff,deepskyblue)`,display:`flex`,flexDirection:`column`,justifyContent:`space-between`, }
 const input = { marginBottom:10 }
 const button = { marginBottom:10 }
 const heading = { fontWeight:`normal`,fontSize:40 }

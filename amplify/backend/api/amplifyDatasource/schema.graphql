@@ -1,6 +1,6 @@
 type Crypto @model {
   id: ID!
-  title: String!
-  color: String
-  price: Float
+  color1: String!
+  color2: String!
+  title: String
 }

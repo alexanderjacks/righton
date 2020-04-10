@@ -1,21 +1,23 @@
-# righton ⚛️🎛🌤
+# color gradient maker 🎨🎛🌤
 
 > by [Jacks Consulting](https://j4cks.com)
 
-# WIP
+## Helps you build color gradients fast, gives you the CSS
 
+## WIP
 Features to build:
-- nomics API call
-- store API locally to DataStore lib
-- map out DataStore using prices not just titles (probably add fields to model)
+- add Auth for user acct login, let users save creations to DataStore lib
+- build out usable CSS code example for gradients
+  - add Cut+Paste for this feature
 
-## Meant to represent an exemplary API (GraphQL) app (React) built in AWS (using Amplify).
+## client-side app (React) built in AWS (using Amplify)
 
-Receives live data from [nomics.com API](https://docs.nomics.com/), mutates list on client devices-- no dedicated servers are running to support this service; hosting is ~$1/month on AWS.
+Users can experiment & make color gradients, app gives CSS3 code that works in any web development stack.
+No dedicated servers support this service; hosting is ~$1/month on AWS, with user devices running the code.
 
 ## This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-[Tut available here](https://aws-amplify.github.io/docs/js/datastore)
+[fresh Amplify tut available here](https://aws-amplify.github.io/docs/js/datastore)
 
 ## Available Scripts
 

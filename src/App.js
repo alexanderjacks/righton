@@ -3,7 +3,7 @@ import { SketchPicker } from 'react-color'
 import { Input, Button } from 'antd'
 import { DataStore } from '@aws-amplify/datastore'
 import { Crypto } from './models'
-import Nomics from './Nomics'
+import './App.css' // for GoogleFonts
 
 const initialState = { color: '#880000', title: '', }
 
@@ -39,11 +39,11 @@ function App() {
 
   return (
     <div style={container}>
-      <h1 style={heading}>Crypto Prices Board</h1>
+      <h1 style={heading}>Color Gradient Maker</h1>
       <Input
         onChange={onChange}
         name='title'
-        placeHolder='crypto title'
+        placeHolder='name this gradient'
         value={formState.title}
         style={input}
       />
@@ -70,7 +70,7 @@ function App() {
         onClick={createCrypto}
         type='primary'
       >
-        Create Crypto
+        Save Gradient
       </Button>
       <div style={{ ...cryptoContainerStyle}}>
       {
@@ -88,17 +88,15 @@ function App() {
         ))
       }
       </div>
-      <Nomics/>
     </div>
   )
 }
 
-const container = { width:`100%`,minHeight:`100vh`,padding:66,background:`linear-gradient(#fff,deepskyblue)`,display:`flex`,flexDirection:`column`,justifyContent:`space-between`, }
+const container = { width:`100%`,minHeight:`100vh`,padding:66,background:`linear-gradient(#888,#eee,#888)`,display:`flex`,flexDirection:`column`,justifyContent:`space-between`,fontFamily:`Lato, sans-serif` }
 const input = { marginBottom:10 }
 const button = { marginBottom:10 }
-const heading = { fontWeight:`normal`,fontSize:40 }
+const heading = { fontWeight:`normal`,fontFamily:`Josefin Sans, sans-serif` }
 const cryptoContainerStyle = { display:`flex`,flexFlow:`row wrap` }
 const cryptoStyle = { padding:12,margin:8,borderRadius:4,maxWidth:`140px` }
 const cryptoTitle = { padding:8,margin:0,fontSize:24 }
-
 export default App

@@ -10,24 +10,24 @@ export const schema = {
                     "isRequired": true,
                     "attributes": []
                 },
-                "title": {
-                    "name": "title",
+                "color1": {
+                    "name": "color1",
                     "isArray": false,
                     "type": "String",
                     "isRequired": true,
                     "attributes": []
                 },
-                "color": {
-                    "name": "color",
+                "color2": {
+                    "name": "color2",
                     "isArray": false,
                     "type": "String",
-                    "isRequired": false,
+                    "isRequired": true,
                     "attributes": []
                 },
-                "price": {
-                    "name": "price",
+                "title": {
+                    "name": "title",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 }
@@ -44,5 +44,5 @@ export const schema = {
     },
     "enums": {},
     "nonModels": {},
-    "version": "4b8b92954af08d7b56e9143847993434"
+    "version": "1ae64e97e36c6905eb809c1c41320c17"
 };

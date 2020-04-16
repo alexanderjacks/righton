@@ -59,16 +59,18 @@ function App() {
         */}
 
         <div>
-          Color #1:&nbsp;
+          <h2>Color #1:&nbsp;
           <span style={{fontWeight:'bold', color:formState.color1}}>
             {formState.color1}
           </span>
+          </h2>
         </div>
         <div>
-          Color #2:&nbsp;
+          <h2>Color #2:&nbsp;
           <span style={{fontWeight:'bold', color:formState.color2}}>
             {formState.color2}
           </span>
+          </h2>
         </div>
 
 
